@@ -1,7 +1,0 @@
-for i in range(n_bootstraps):
-    sample = df.copy()
-    sample['y'] += np.random.normal(0, df['y'].std() * 0.1, size=len(sample))  # small noise
-    m = Prophet(yearly_seasonality=True)
-    m.fit(sample)
-    f = m.predict(future)
-    bootstrapped_forecasts.append(f['yhat'].values[-12:])  # only 2025
