@@ -14,12 +14,10 @@ This project implements a hybrid time-series forecasting model (AROPHET) for  sa
 - **Comprehensive Visualizations:** Plots actual vs. forecasted sales, confidence intervals, errors, and ROP comparisons.
 
 ## Performance Comparison
-| Metric       | Prophet           | AROPHET Hybrid     |
-|-------------|-------------------|--------------------|
-| MAE         | 128.14            | 66.58              |
-| RMSE        | 143.80            | 84.59              |
-| MAPE (%)    | 10.86             | 5.64               |
-| R²          | 0.018             | 0.660              |
+Forecast Accuracy Metrics:
+     Model        MAE       RMSE      MAPE        R2
+0  Prophet  23.336806  30.410919  5.737078  0.576059
+1  AROPHET  18.688320  24.623526  4.517284  0.722063
 
 AROPHET consistently outperforms Prophet across all metrics, providing more reliable and precise forecasts for inventory planning.
 
