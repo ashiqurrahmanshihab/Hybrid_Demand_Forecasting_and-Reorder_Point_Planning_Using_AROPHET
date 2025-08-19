@@ -53,10 +53,3 @@ Install dependencies with:
 ```bash
 pip install pandas numpy matplotlib plotly prophet statsmodels scikit-learn
 ```
-
-## Citation
-If you use this project, please cite:
-> Hybrid Demand Forecasting and Reorder Point Planning Using AROPHET in the Pharmaceutical Industry
-
-## License
-This project is released under the MIT License.
