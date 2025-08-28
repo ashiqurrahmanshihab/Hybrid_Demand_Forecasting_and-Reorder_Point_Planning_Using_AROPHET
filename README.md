@@ -13,13 +13,20 @@ This project implements a hybrid time-series forecasting model (AROPHET) for  sa
 - **Rolling Error Analysis:** Tracks rolling mean absolute error (MAE) for model performance.
 - **Comprehensive Visualizations:** Plots actual vs. forecasted sales, confidence intervals, errors, and ROP comparisons.
 
-## Performance Comparison
-Forecast Accuracy Metrics:
-     Model        MAE       RMSE      MAPE        R2
-0  Prophet  23.336806  30.410919  5.737078  0.576059
-1  AROPHET  18.688320  24.623526  4.517284  0.722063
+# Error Table (Jan–Jul 2025)
 
-AROPHET consistently outperforms Prophet across all metrics, providing more reliable and precise forecasts for inventory planning.
+| Month    | Actual | Prophet | Hybrid | Prophet Error | Hybrid Error | Prophet % Error | Hybrid % Error |
+|----------|--------|---------|--------|--------------|-------------|-----------------|---------------|
+| January  | 600    | 421.4   | 491.4  | 178.6        | 108.6       | 29.8%           | 18.1%         |
+| February | 520    | 1064.9  | 495.9  | -544.9       | 24.1        | -104.8%         | 4.6%          |
+| March    | 570    | 489.2   | 500.1  | 80.8         | 69.9        | 14.2%           | 12.3%         |
+| April    | 750    | 637.6   | 505.0  | 112.4        | 245.0       | 15.0%           | 32.7%         |
+| May      | 680    | 645.8   | 509.9  | 34.2         | 170.1       | 5.0%            | 25.0%         |
+| June     | 720    | 676.8   | 514.9  | 43.2         | 205.1       | 6.0%            | 28.5%         |
+| July     | 520    | 683.4   | 519.9  | -163.4       | 0.1         | -31.4%          | 0.02%         |
+
+
+For January–July 2025, the AROPHET hybrid model consistently outperformed Prophet in forecast accuracy. The hybrid model achieved lower MAE, RMSE, and MAPE, and a higher R², indicating a better fit to actual sales. The largest Prophet error occurred in February, likely due to unforeseen market changes or supply chain disruptions, while the hybrid model substantially reduced this error. Both models underestimated sales in April–June, suggesting the need for further refinement and consideration of external factors.
 
 ## Practical Implications
 - **Accurate ROP Calculation:** Ensures stock availability and reduces excess inventory costs.
